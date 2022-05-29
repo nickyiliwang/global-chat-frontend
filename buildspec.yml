@@ -9,7 +9,7 @@ phases:
       - npm run build
   post_buid:
     commands:
-      - - aws cloudfront create-invalidation --distribution-id={E1JCQX6Q5R4J8A} --paths '/*'
+      - aws cloudfront create-invalidation --distribution-id={E1JCQX6Q5R4J8A} --paths '/*'
 
 
 artifacts:
