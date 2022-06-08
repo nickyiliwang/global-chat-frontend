@@ -99,6 +99,7 @@ export default function ChatRoom() {
     };
     // console.log("sending", params);
     client.send(JSON.stringify(params));
+    setMessageToSend("");
   };
 
   const handleSubmit = (event) => {
@@ -197,7 +198,7 @@ export default function ChatRoom() {
                   label="Type Something"
                   fullWidth
                   onChange={handleMessageToSendChange}
-                  // defaultValue={messageToSend}
+                  value={messageToSend}
                 />
               </Grid>
               <Grid item xs={1} align="right">
