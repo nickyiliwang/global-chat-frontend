@@ -19,16 +19,14 @@ export default function ChatRoom() {
   const [messageToSend, setMessageToSend] = React.useState("");
   const [prefLang, setPrefLang] = React.useState("en");
   const [messagesToRender, setMessagesToRender] = React.useState([]);
+  const api = process.env.REACT_APP_ENDPOINT;
 
   //   React.useEffect(() => {
   //     console.log(messagesToRender);
   //   }, [messagesToRender]);
 
   React.useEffect(() => {
-    client = new w3cwebsocket(
-      "ws://localhost:3001/"
-      // "wss://1yryn2nkab.execute-api.us-east-1.amazonaws.com/dev"
-    );
+    client = new w3cwebsocket(api);
     client.error = function () {
       console.log("WebSocket Client error , connection closed");
     };
