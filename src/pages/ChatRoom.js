@@ -19,7 +19,7 @@ export default function ChatRoom() {
   const [messageToSend, setMessageToSend] = React.useState("");
   const [prefLang, setPrefLang] = React.useState("en");
   const [messagesToRender, setMessagesToRender] = React.useState([]);
-  const api = process.env.REACT_APP_ENDPOINT;
+  const api = process.env.REACT_APP_WS_ENDPOINT;
 
   //   React.useEffect(() => {
   //     console.log(messagesToRender);
