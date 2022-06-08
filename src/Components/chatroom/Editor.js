@@ -13,7 +13,7 @@ export default function MyEditor() {
   }, [editorState]);
 
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <Editor
         editorState={editorState}
         onEditorStateChange={setEditorState}
