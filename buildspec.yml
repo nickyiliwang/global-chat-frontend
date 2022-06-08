@@ -5,7 +5,6 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - npm install react-draft-wysiwyg --forced
       - npm install
   build:
     commands:
